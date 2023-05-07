@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PickACard
 {
@@ -10,6 +6,14 @@ namespace PickACard
     {
         static void Main(string[] args)
         {
+            while (true)
+            {
+                Console.WriteLine("Pick how many cards you would like to draw.");
+                string answer = Console.ReadLine();
+                int.TryParse(answer, out int number);
+                PickCards.PrintNumber(number);
+            }
+
         }
     }
 }
