@@ -10,7 +10,6 @@ namespace PickACard
         static Random random = new Random();
         public static void PrintNumber(int card)
         {
-
             List<int> numbers = new List<int>();
             while (numbers.Count() < card)
             {
@@ -24,7 +23,7 @@ namespace PickACard
 
         private static string PickANumber(int number)
         {
-            int digit = random.Next(1, 13);
+            int digit = random.Next(1, 14);
             if (digit == 1) { return "Aces"; }
             else if (digit == 11) { return "Jack"; }
             else if (digit == 12) { return "Queen"; }
@@ -34,7 +33,7 @@ namespace PickACard
 
         private static string PickASuite(int number)
         {
-            int digit = random.Next(1, 4);
+            int digit = random.Next(1, 5);
             if (digit == 1) { return " of Hearts."; }
             else if (digit == 2) { return " of Spades."; }
             else if (digit == 3) { return " of Clubs."; }
