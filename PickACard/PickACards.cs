@@ -25,9 +25,9 @@ namespace PickACard
         {
             int digit = random.Next(1, 14);
             if (digit == 1) { return "Aces"; }
-            else if (digit == 11) return "Jack"; 
-            else if (digit == 12) return "Queen"; 
-            else if (digit == 13) return "King";
+            if (digit == 11) return "Jack"; 
+            if (digit == 12) return "Queen"; 
+            if (digit == 13) return "King";
             else return digit.ToString();
         }
 
@@ -35,8 +35,8 @@ namespace PickACard
         {
             int digit = random.Next(1, 5);
             if (digit == 1) return " of Hearts.";
-            else if (digit == 2) return " of Spades.";
-            else if (digit == 3) return " of Clubs.";
+            if (digit == 2) return " of Spades.";
+            if (digit == 3) return " of Clubs.";
             else return " of Diamonds. ";
         }
     }
